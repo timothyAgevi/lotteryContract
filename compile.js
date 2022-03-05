@@ -3,7 +3,7 @@ const fs =require('fs');
 const solc=require('solc');
 
 //find path
-const inboxPath= path.resolve(__dirname,'contracts','inbox.sol');
+const inboxPath= path.resolve(__dirname,'contracts','Lottery.sol');
 
 //read content of file
 const source =fs.readFileSync(inboxPath,'utf8');
@@ -11,7 +11,7 @@ const source =fs.readFileSync(inboxPath,'utf8');
 var input = {
     language: 'Solidity',
     sources: {
-        'inbox.sol' : {
+        'Lottery.sol' : {
             content: source
         }
     },
@@ -34,7 +34,7 @@ var input = {
 const output =JSON.parse(solc.compile(JSON.stringify(input)));
 
 //output here contains JSON output as specified in documentation
-var outputContracts= output.contracts['inbox.sol']['Inbox']
+var outputContracts= output.contracts['lottery.sol']['Lottery']
 
 //export ABI interface
 module.exports.abi = outputContracts.abi
