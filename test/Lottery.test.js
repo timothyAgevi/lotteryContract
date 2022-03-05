@@ -7,4 +7,13 @@ const {abi,bytecode}= require('../compile')
 
 
 //2 variables:1 instance of contrACT, 2. LIST OF ALL ganache unlocked a/c for us
+let lottery;
+let accounts;
+
+beforeEach( async()=>{
+    accounts=await web3.eth.getAccounts();
+    lottery= await  web3.eth.Contract(JSON.parse(imterface))
+    .deploy({data:bytecode}
+        .send({from:accounts[0],gas:"1000000"}))
+})
 
