@@ -1,4 +1,4 @@
-const { strictEqual } = require('assert');
+// const { strictEqual } = require('assert');
 const assert = require('assert');
 const ganache= require('ganache-cli');// local test network
 const Web3 =require('web3');// constructor function
@@ -12,7 +12,7 @@ let accounts;
 
 beforeEach( async()=>{
     accounts=await web3.eth.getAccounts();
-    lottery= await  web3.eth.Contract(JSON.parse(imterface))
+    lottery= await  web3.eth.Contract(JSON.parse(abi))
     .deploy({data:bytecode}
         .send({from:accounts[0],gas:"1000000"}))
 })
