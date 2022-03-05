@@ -18,7 +18,7 @@ var input = {
     settings: {
         outputSelection: {
             '*': {
-                '*': [ "abi", "evm.bytecode" ]
+                '*': [ "*" ]
             }
         }
     }
@@ -28,7 +28,9 @@ var input = {
 
 
 //compile  statement
-//  module.exports = solc.compile(source,1).contracts[':Inbox'];
+//  module.exports = solc.compile(source,1).contracts[':Lottery'];
+
+
 
 
 const output =JSON.parse(solc.compile(JSON.stringify(input)));
