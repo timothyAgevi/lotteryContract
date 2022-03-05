@@ -7,3 +7,4 @@ const {abi,bytecode}= require('../compile')
 
 
 //2 variables:1 instance of contrACT, 2. LIST OF ALL ganache unlocked a/c for us
+
