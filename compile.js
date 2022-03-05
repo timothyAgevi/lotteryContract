@@ -3,10 +3,10 @@ const fs =require('fs');
 const solc=require('solc');
 
 //find path
-const inboxPath= path.resolve(__dirname,'contracts','Lottery.sol');
+const lotteryPath= path.resolve(__dirname,'contracts','Lottery.sol');
 
 //read content of file
-const source =fs.readFileSync(inboxPath,'utf8');
+const source =fs.readFileSync(lotteryPath,'utf8');
 
 var input = {
     language: 'Solidity',
