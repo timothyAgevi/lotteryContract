@@ -40,6 +40,8 @@ describe('Lottery Contract',()=>{
     //only element in players array should be address atzero
     // only 1 element in array
 assert.equal(accounts[0],players[0])
+assert.equal(accounts[1],players[0])
+assert.equal(accounts[2],players[0])
     //corect address within array
     assert.equal(3,players.length);
 })
