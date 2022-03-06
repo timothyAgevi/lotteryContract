@@ -76,7 +76,7 @@ assert.equal(accounts[2],players[2])
         value:web3.utils.toWei('2','ether' )
       });
        const initialBalance=await web3.eth.getBalance([0]);
-
+       await lottery.methods.pickWinner().send({ from:accounts[0]})
 
     } )
 
