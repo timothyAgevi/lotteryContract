@@ -77,6 +77,7 @@ assert.equal(accounts[2],players[2])
       });
        const initialBalance=await web3.eth.getBalance([0]);
        await lottery.methods.pickWinner().send({ from:accounts[0]})
+       const finalBalance = await web3.eth.getBalance(accounts[0])
 
     } )
 
