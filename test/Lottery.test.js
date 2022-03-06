@@ -84,5 +84,6 @@ assert.equal(accounts[2],players[2])
     } )
 
     })
-
+//ssert that plays is empty
+//assert that lottery is empty
 
