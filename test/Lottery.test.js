@@ -41,6 +41,6 @@ describe('Lottery Contract',()=>{
     // only 1 element in array
 assert.equal(accounts[0],players[0])
     //corect address within array
-    assert.equal(1,players.length);
+    assert.equal(3,players.length);
 })
 
