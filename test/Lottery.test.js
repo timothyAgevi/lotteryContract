@@ -1,5 +1,5 @@
-// const { strictEqual } = require('assert');
-const assert = require('assert');
+
+const assert =require('assert');
 const ganache= require('ganache-cli');// local test network
 const Web3 =require('web3');// constructor function
 const web3 =new Web3(ganache.provider());//instance of web3
@@ -16,7 +16,7 @@ beforeEach( async()=>{
     .deploy({data:bytecode}
         .send({from:accounts[0],gas:"1000000"}))
 })
-describew('Lottery Contract',()=>{
+describe('Lottery Contract',()=>{
     it('deploys a contract',()=>{
         assert.ok(lottery.options.address)
     })

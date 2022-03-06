@@ -38,5 +38,6 @@ const input = {
   module.exports.bytecode = outputContracts.evm.bytecode.object;
 
   
-
+  // TypeError: Cannot read properties of undefined (reading 'Lottery.sol')
+  // at Object.<anonymous> (/home/agevi/web/lotteryContract/compile.js:32:41)
   
