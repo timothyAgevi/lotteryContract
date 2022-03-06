@@ -58,6 +58,16 @@ assert.equal(accounts[2],players[2])
     ,catch(err){
        assert(err); 
     }
+    });
+    it('only manager can call winner',async()=>{
+        try{
+            await lottery.methods.pickWinner().send({
+                from :accounts[1]
+            });
+            assert(false);
+        }catch(err){
+            assert(err)
+        }
     })
 })
 
