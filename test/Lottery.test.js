@@ -69,5 +69,8 @@ assert.equal(accounts[2],players[2])
             assert(err)
         }
     })
+    it('sends money to the winner and resets the players array', async()=>{
+        
+    })
 })
 
