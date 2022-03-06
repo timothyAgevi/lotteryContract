@@ -70,7 +70,16 @@ assert.equal(accounts[2],players[2])
         }
     })
     it('sends money to the winner and resets the players array', async()=>{
-        
+      //entering only 1 player,not realy who wins
+      await lottery.methods.enter().send({
+        from:accounts[0],
+        value:web3.utils.toWei('2','ether' )
+      });
+       const initialBalance=await web3.eth.getBalance([0]);
+
+
+    } )
+
     })
-})
+
 
