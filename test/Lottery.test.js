@@ -44,5 +44,20 @@ assert.equal(accounts[1],players[1])
 assert.equal(accounts[2],players[2])
     //corect address within array
     assert.equal(3,players.length);
+
+    // minimam amount of ether to enter
+    it('requires minimum amoiubt of ether to enter',asyn()=> {
+        try{
+        await lottery.methods.enter(send({
+           from:accounts[0],
+           value:0
+        }));
+        assert(false)//dentifier expected. 'false' is a reserved word that cannot be used here.
+    } 
+    
+    ,catch(err){
+       assert(err); 
+    }
+    })
 })
 
